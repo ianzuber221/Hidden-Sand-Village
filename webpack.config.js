@@ -2,7 +2,9 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  plugins: [new Dotenv()],
+  plugins: [new Dotenv({
+      systemvars: true
+    })],
   mode: 'development',
   entry: path.join(__dirname, '/client/src/index.jsx'),
   output: {
